@@ -1,0 +1,21 @@
+{
+  "name": "Luc & Loli Camino Celebration",
+  "short_name": "Camino Celebration",
+  "description": "Celebrating Luc's leadership and Camino journey",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fef3c7",
+  "theme_color": "#f59e0b",
+  "icons": [
+    {
+      "src": "/images/luc-portrait.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/luc-portrait.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
