@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import {
   Bug,
   Heart,
@@ -30,11 +30,7 @@ const ProcessFlow: React.FC = () => {
           Joy & JEMA's bug <Bug className="inline blink" size={24} color="green" /> & our{' '}
           <Heart className="inline" size={24} color="red" fill="red" />{' '}
           <span className="text-blue-600">Solo</span>
-          <img
-            src="https://kyft.club/wp-content/uploads/2020/10/sololearn200.png"
-            alt="SoloLearn"
-            className="inline h-6 w-6"
-          />
+          
           <span className="text-gray-600">Learn</span>!
         </h1>
       </header>
@@ -43,17 +39,7 @@ const ProcessFlow: React.FC = () => {
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-6">
           Process 1: What do SoloLearners like Joy{' '}
-          <img
-            className="inline h-10 w-10 rounded-full border-2 border-blue-400"
-            src="https://blob.sololearn.com/avatars/d4065fae-5af1-4b84-9119-909874296073.jpg"
-            alt="Joy"
-          />{' '}
           & JEMA{' '}
-          <img
-            className="inline h-10 w-10 rounded-full border-2 border-blue-400"
-            src="https://blob.sololearn.com/avatars/aa114d9b-7930-4917-ad77-0da0075ab126.jpg"
-            alt="JEMA"
-          />{' '}
           want?
         </h2>
 
