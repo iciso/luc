@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+"use client"
+
+import { useEffect, useState } from "react"
 import {
   Bug,
   Heart,
