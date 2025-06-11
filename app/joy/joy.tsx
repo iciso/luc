@@ -249,4 +249,18 @@ const ProcessFlow: React.FC = () => {
   );
 };
 
+useEffect(() => {
+  const backToTop = document.getElementById('back2Top');
+  
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      backToTop?.classList.remove('hidden');
+    } else {
+      backToTop?.classList.add('hidden');
+    }
+  });
+  
+  return () => window.removeEventListener('scroll');
+}, []);
+
 export default ProcessFlow;
