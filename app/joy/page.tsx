@@ -20,7 +20,6 @@ import {
   Sparkles
 } from 'lucide-react';
 import Image from 'next/image';
-import styles from './ProcessFlow.module.css';
 
 const JoyPage = () => {
   const [isMounted, setIsMounted] = useState(false);
