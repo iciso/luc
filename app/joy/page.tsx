@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { useEffect } from "react"
 import {
   Bug,
   Heart,
@@ -18,7 +18,7 @@ import {
   ChevronRight,
   Wrench,
   Sparkles
-} from 'lucide-react';
+} from "lucide-react"
 
 const ProcessFlow: React.FC = () => {
   const [activeProcess, setActiveProcess] = useState<number | null>(null);
