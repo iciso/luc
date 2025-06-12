@@ -1,14 +1,28 @@
-"use client"; // Essential for client components
+'use client';
 
 import React, { useState, useEffect } from 'react';
 import { 
-  Bug, Heart, Laugh, Users, User, Laptop, History, 
-  ThumbsUp, Smile, ArrowDown, MessageSquare, AlertCircle 
+  Bug, 
+  Heart, 
+  Laugh, 
+  Users, 
+  User, 
+  Laptop, 
+  History, 
+  ThumbsUp, 
+  Smile, 
+  ArrowDown, 
+  MessageSquare, 
+  AlertCircle,
+  ChevronDown,
+  ChevronRight,
+  Wrench,
+  Sparkles
 } from 'lucide-react';
 import Image from 'next/image';
-import styles from './ProcessFlow.module.css'; // CSS Module import
+import styles from './ProcessFlow.module.css';
 
-const ProcessFlow = () => {
+const JoyPage = () => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -25,7 +39,6 @@ const ProcessFlow = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Prevent SSR for window-dependent elements
   if (!isMounted) {
     return (
       <div className="container mx-auto px-4 py-8">
@@ -38,21 +51,14 @@ const ProcessFlow = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* Header */}
       <header className="mb-8">
         <h1 className="text-3xl font-bold text-center">
-          Joy & JEMA's bug <Bug className={`inline ${styles.blink}`} size={24} color="green" /> & our{' '}
+          Joy &amp; JEMA&apos;s bug <Bug className={`inline ${styles.blink}`} size={24} color="green" /> &amp; our{' '}
           <Heart className="inline" size={24} color="red" fill="red" />{' '}
           <span className="text-blue-600">Solo</span>
           <span className="text-gray-600">Learn</span>!
         </h1>
       </header>
-
-      {/* Rest of your JSX remains the same but: */}
-      {/* Replace all animation classes with styles.module.css references */}
-      {/* Example: */}
-      <Bug className={`mx-2 ${styles.tinUpOut}`} size={24} color="green" />
-
 
             {/* Process 1 */}
       <section className="mb-12">
@@ -135,7 +141,7 @@ const ProcessFlow = () => {
                 <div className="bg-red-100 p-2 rounded-lg">
                   <p className="text-red-800 text-sm inline-flex items-center">
                     Too Bad! Every one who crosses level 20 will have to wait till the small team at SL solves the Level
-                    21 <Bug className=={`mx-2 ${styles.tinUpOut}`} size={24} color="green" /> Bug!
+                    21 <Bug className={`mx-2 ${styles.tinUpOut}`} size={24} color="green" /> Bug!
                   </p>
                 </div>
               </div>
@@ -245,6 +251,9 @@ const ProcessFlow = () => {
         </p>
       </footer>
 
+
+
+
       {/* Back to Top Button */}
       <a
         href="#"
@@ -258,4 +267,4 @@ const ProcessFlow = () => {
   );
 };
 
-export default ProcessFlow;
+export default JoyPage;
