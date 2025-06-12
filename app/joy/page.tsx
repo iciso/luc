@@ -110,7 +110,7 @@ const JoyPage = () => {
       {/* Header */}
       <header className="mb-8">
         <h1 className="text-3xl font-bold text-center">
-          Joy & JEMA's bug <Bug className={`inline ${styles.blink}`} size={24} color="green" /> & our{' '}
+          Joy & JEMA's bug <Bug className={animationStyles.blink} size={24} color="green" /> & our{' '}
           <Heart className="inline" size={24} color="red" fill="red" />{' '}
           <span className="text-blue-600">Solo</span>
           <span className="text-gray-600">Learn</span>!
@@ -119,7 +119,7 @@ const JoyPage = () => {
 
       {/* Rest of your JSX remains the same but: */}
       {/* Replace all animation classes with styles.module.css references */}
-      {/* Example:    <Bug className={`mx-2 ${styles.tinUpOut}`} size={24} color="green" />   */}
+      {/* Example:    <Bug className={animationStyles.blink} size={24} color="green" />   */}
     
 
 
@@ -135,7 +135,7 @@ const JoyPage = () => {
 
         <div className="bg-blue-100 p-4 rounded-lg text-center mb-4">
           <p className="text-blue-800 font-medium inline-flex items-center">
-            <Bug className={`mx-2 ${styles.tinUpOut}`} size={24} color="green" />
+            <Bug className={animationStyles.blink} size={24} color="green" />
             Want the Level 21 bug solved in SL quickly!
           </p>
         </div>
@@ -158,7 +158,7 @@ const JoyPage = () => {
             <ArrowDown className="mx-auto mb-4" />
             <div className="bg-green-100 p-4 rounded-lg">
               <p className="text-green-800 inline-flex items-center">
-                Hurrah! <Laugh className="mx-2 wrench" size={24} color="crimson" /> Go to Process 2.
+                Hurrah! <Laugh className={animationStyles.wrench} size={24} color="crimson" className="ml-4" /> Go to Process 2.
               </p>
             </div>
           </div>
@@ -171,7 +171,7 @@ const JoyPage = () => {
             <ArrowDown className="mx-auto mb-4" />
             <div className="bg-blue-100 p-4 rounded-lg mb-4">
               <p className="text-blue-800 inline-flex items-center">
-                Let's share <Bug className={`mx-2 ${styles.tinUpOut}`} size={24} color="green" /> bug details?
+                Let's share <Bug className={animationStyles.tinRightOut} size={24} color="green" /> bug details?
               </p>
             </div>
 
@@ -189,8 +189,8 @@ const JoyPage = () => {
                 <ArrowDown className="mx-auto mb-2" />
                 <div className="bg-green-100 p-2 rounded-lg">
                   <p className="text-green-800 text-sm inline-flex items-center">
-                    Okay! Then the best <Users className={`mx-2 ${styles.tinUpOut}`} size={20} color="black" /> in SL can join to solve
-                    the <Bug className={`mx-2 ${styles.tinUpOut}`} size={24} color="green" /> Bug. So, we proceed to step 2.
+                    Okay! Then the best <Users className={animationStyles.tinUpOut} size={20} color="black" /> in SL can join to solve
+                    the <Bug className={animationStyles.tinUpOut} size={24} color="green" /> Bug. So, we proceed to step 2.
                   </p>
                 </div>
               </div>
@@ -204,7 +204,7 @@ const JoyPage = () => {
                 <div className="bg-red-100 p-2 rounded-lg">
                   <p className="text-red-800 text-sm inline-flex items-center">
                     Too Bad! Every one who crosses level 20 will have to wait till the small team at SL solves the Level
-                    21 <Bug className=={`mx-2 ${styles.tinUpOut}`} size={24} color="green" /> Bug!
+                    21 <Bug className={animationStyles.tinRightOut} size={24} color="green" /> Bug!
                   </p>
                 </div>
               </div>
@@ -217,12 +217,12 @@ const JoyPage = () => {
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-6 inline-flex items-center">
           Process 2: SL joins with the best Coders among{' '}
-          <Laptop className={`mx-2 ${styles.blink}`} size={20} color="green" /> SoloLearners to fix the Bug.
+          <Laptop className={animationStyles.blink} size={20} color="green" /> SoloLearners to fix the Bug.
         </h2>
 
         <div className="bg-blue-100 p-4 rounded-lg text-center mb-4">
           <p className="text-blue-800 font-medium inline-flex items-center">
-            SL gains a system to fix <Bug className="mx-2 tinUpOut" size={24} color="green" /> bugs?
+            SL gains a system to fix <Bug className={animationStyles.tinUpOut} size={24} color="green" /> bugs?
           </p>
         </div>
 
@@ -259,7 +259,7 @@ const JoyPage = () => {
                 <div className="bg-green-100 p-2 rounded-lg">
                   <p className="text-green-800 text-sm inline-flex items-center">
                     Many hands solve more bugs. Also, team work yields quicker{' '}
-                    <History className="mx-1 blink" size={20} color="blue" /> results.
+                    <History className={animationStyles.blink} size={24} color="blue" /> results.
                   </p>
                 </div>
               </div>
@@ -283,19 +283,19 @@ const JoyPage = () => {
           {/* Feedback Path */}
           <div className="text-center">
             <button className="bg-green-500 text-white px-6 py-3 rounded-lg font-bold mb-4">
-              SL asks feedback on <Bug className={`mx-2 ${styles.burst}`} size={24} color="black" /> bugs?
+              SL asks feedback on <Bug className={animationStyles.burst} size={24} color="black" /> bugs?
             </button>
             <ArrowDown className="mx-auto mb-4" />
             <div className="bg-green-100 p-4 rounded-lg mb-4">
               <p className="text-green-800 inline-flex items-center">
                 Okay! SL acts on feedback{' '}
-                <MessageSquare className={`mx-2 ${styles.wrench}`} size={24} color="indigo" />
+                <MessageSquare className={animationStyles.wrench} size={24} color="indigo" />
               </p>
             </div>
             <ArrowDown className="mx-auto mb-4" />
             <div className="bg-green-100 p-4 rounded-lg">
               <p className="text-green-800 inline-flex items-center">
-                SL has an unique team <Laugh className={`mx-2 ${styles.spin}`} size={24} color="green" /> of happy
+                SL has an unique team <Laugh className={animationStyles.spin} size={24} color="green" /> of happy
                 talented coder volunteers!
               </p>
             </div>
@@ -305,12 +305,12 @@ const JoyPage = () => {
 
       <footer className="mt-12 border-t pt-6">
         <p className="italic">
-          Some of us <User className={`mx-2 ${styles.pulse}`} size={24} color="blue" /> may be in SL for a long time. Who knows,
+          Some of us <User className={animationStyles.pulse} size={24} color="blue" /> may be in SL for a long time. Who knows,
           maybe a life time! And, each one of us can do our bit for the SL dream team!{' '}
           <ThumbsUp className="inline" size={24} color="purple" /> For a start, we can get the correct and latest
-          information on the Level 21 Bug, <Bug className={`mx-2 ${styles.burst}`} size={24} color="black" /> or if you have more
+          information on the Level 21 Bug, <Bug className={animationStyles.burst} size={24} color="black" /> or if you have more
           time, please call the person in SoloLearn that you know the most! This is just a{' '}
-          <Smile className={`mx-2 ${styles.wrench}`} size={24} color="crimson" /> demo of what I could do!
+          <Smile className={animationStyles.wrench} size={24} color="crimson" /> demo of what I could do!
         </p>
       </footer>
 
