@@ -192,9 +192,9 @@ const JoyPage = () => {
                 <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-2" />
                 <div className="bg-green-100 p-2 rounded-lg">
                   <p className="text-green-800 text-sm inline-flex items-center">
-                    <Users style={animationStyles.tinUpOut} size={24} color="black" className="mx-1" />
+                    <Users style={animationStyles.tinUpOut} size={24} color="black" />
                     <span>Okay! Then the best in SL can join to solve the </span>
-                    <Bug style={{display: 'inline-block'}} size={24} color="green" className="mx-1" />
+                    <Bug style={{display: 'inline-block'}} size={24} color="green" />
                     <span>Bug. So, we proceed to step 2.</span>
                   </p>
                 </div>
@@ -209,7 +209,7 @@ const JoyPage = () => {
                 <div className="bg-red-100 p-2 rounded-lg">
                   <p className="text-red-800 text-sm inline-flex items-center">
                     <span>Too Bad! Every one who crosses level 20 will have to wait till the small team at SL solves the Level 21 </span>
-                    <Bug style={animationStyles.tinRightOut} size={24} color="green" className="mx-1" />
+                    <Bug style={animationStyles.tinRightOut} size={24} color="green" />
                     <span>Bug!</span>
                   </p>
                 </div>
@@ -247,7 +247,7 @@ const JoyPage = () => {
             <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-4" />
             <div className="bg-green-100 p-4 rounded-lg mb-4">
               <p className="text-green-800 inline-flex items-center">
-                <Users style={{color: 'gold', display: 'inline-block'}} size={24} className="mx-2" />
+                <Users style={{color: 'gold', display: 'inline-block'}} size={24} />
                 <span>Joint teams solves all SL bugs?</span>
               </p>
             </div>
@@ -267,7 +267,7 @@ const JoyPage = () => {
                 <div className="bg-green-100 p-2 rounded-lg">
                   <p className="text-green-800 text-sm inline-flex items-center">
                     <span>Many hands solve more bugs. Also, team work yields quicker </span>
-                    <History style={animationStyles.blink} size={24} color="blue" className="mx-1" />
+                    <History style={animationStyles.blink} size={24} color="blue" />
                     <span>results.</span>
                   </p>
                 </div>
@@ -282,7 +282,7 @@ const JoyPage = () => {
                 <div className="bg-red-100 p-2 rounded-lg">
                   <p className="text-red-800 text-sm inline-flex items-center">
                     <span>SL and SoloLearners can put their heads </span>
-                    <AlertCircle style={{display: 'inline-block'}} size={24} color="red" className="mx-1" />
+                    <AlertCircle style={{display: 'inline-block'}} size={24} color="red" />
                     <span>together and think of another process.</span>
                   </p>
                 </div>
@@ -298,14 +298,14 @@ const JoyPage = () => {
             <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-4" />
             <div className="bg-green-100 p-4 rounded-lg mb-4">
               <p className="text-green-800 inline-flex items-center">
-                <MessageSquare style={animationStyles.wrench} size={24} color="indigo" className="mx-2" />
+                <MessageSquare style={animationStyles.wrench} size={24} color="indigo" />
                 <span>Okay! SL acts on feedback</span>
               </p>
             </div>
             <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-4" />
             <div className="bg-green-100 p-4 rounded-lg">
               <p className="text-green-800 inline-flex items-center">
-                <Laugh style={animationStyles.spin} size={24} color="crimson" className="mx-2" />
+                <Laugh style={animationStyles.spin} size={24} color="crimson" />
                 <span>SL has an unique team of happy talented coder volunteers!</span>
               </p>
             </div>
