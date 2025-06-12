@@ -192,9 +192,9 @@ const JoyPage = () => {
                 <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-2" />
                 <div className="bg-green-100 p-2 rounded-lg">
                   <p className="text-green-800 text-sm inline-flex items-center">
-                    <Users style={animationStyles.tinUpOut} size={20} color="black" className="mx-1" />
+                    <Users style={animationStyles.tinUpOut} size={24} color="black" className="mx-1" />
                     <span>Okay! Then the best in SL can join to solve the </span>
-                    <Bug style={{display: 'inline-block'}} size={20} color="green" className="mx-1" />
+                    <Bug style={{display: 'inline-block'}} size={24} color="green" className="mx-1" />
                     <span>Bug. So, we proceed to step 2.</span>
                   </p>
                 </div>
@@ -209,7 +209,7 @@ const JoyPage = () => {
                 <div className="bg-red-100 p-2 rounded-lg">
                   <p className="text-red-800 text-sm inline-flex items-center">
                     <span>Too Bad! Every one who crosses level 20 will have to wait till the small team at SL solves the Level 21 </span>
-                    <Bug style={animationStyles.tinRightOut} size={20} color="green" className="mx-1" />
+                    <Bug style={animationStyles.tinRightOut} size={24} color="green" className="mx-1" />
                     <span>Bug!</span>
                   </p>
                 </div>
@@ -267,7 +267,7 @@ const JoyPage = () => {
                 <div className="bg-green-100 p-2 rounded-lg">
                   <p className="text-green-800 text-sm inline-flex items-center">
                     <span>Many hands solve more bugs. Also, team work yields quicker </span>
-                    <History style={animationStyles.blink} size={20} color="blue" className="mx-1" />
+                    <History style={animationStyles.blink} size={24} color="blue" className="mx-1" />
                     <span>results.</span>
                   </p>
                 </div>
@@ -282,7 +282,7 @@ const JoyPage = () => {
                 <div className="bg-red-100 p-2 rounded-lg">
                   <p className="text-red-800 text-sm inline-flex items-center">
                     <span>SL and SoloLearners can put their heads </span>
-                    <AlertCircle style={{display: 'inline-block'}} size={20} color="red" className="mx-1" />
+                    <AlertCircle style={{display: 'inline-block'}} size={24} color="red" className="mx-1" />
                     <span>together and think of another process.</span>
                   </p>
                 </div>
