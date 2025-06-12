@@ -121,8 +121,6 @@ const JoyPage = () => {
       {/* Replace all animation classes with styles.module.css references */}
       {/* Example:    <Bug className={animationStyles.blink} size={24} color="green" />   */}
     
-
-
             {/* Process 1 */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-6">
