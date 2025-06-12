@@ -5,37 +5,45 @@ import {
   Bug, Heart, Laugh, Users, User, Laptop, History, 
   ThumbsUp, Smile, ArrowDown, MessageSquare, AlertCircle 
 } from 'lucide-react';
-import Image from 'next/image';
 
 const JoyPage = () => {
   const [isMounted, setIsMounted] = useState(false);
 
-  // Animation styles
-  const animationStyles = {
+  // Animation styles with proper React.CSSProperties typing
+  const animationStyles: Record<string, React.CSSProperties> = {
     blink: {
-      animation: 'blink 1s step-end infinite'
+      animation: 'blink 1s step-end infinite',
+      display: 'inline-block'
     },
     pulse: {
-      animation: 'pulse 1s ease-in-out infinite'
+      animation: 'pulse 1s ease-in-out infinite',
+      display: 'inline-block'
     },
     tinRightOut: {
-      animation: 'tinRightOut 3s ease-in-out infinite'
+      animation: 'tinRightOut 3s ease-in-out infinite',
+      display: 'inline-block'
     },
     tinUpOut: {
-      animation: 'tinUpOut 3s ease-in-out infinite'
+      animation: 'tinUpOut 3s ease-in-out infinite',
+      display: 'inline-block'
     },
     wrench: {
-      animation: 'wrench 3s ease-in-out infinite'
+      animation: 'wrench 3s ease-in-out infinite',
+      display: 'inline-block'
     },
     burst: {
-      animation: 'burst 3s ease-in-out infinite'
+      animation: 'burst 3s ease-in-out infinite',
+      display: 'inline-block'
+    },
+    spin: {
+      animation: 'spin 3s linear infinite',
+      display: 'inline-block'
     }
   };
 
   useEffect(() => {
     setIsMounted(true);
     
-    // Add global styles for animations
     const styleElement = document.createElement('style');
     styleElement.textContent = `
       @keyframes blink {
@@ -78,6 +86,10 @@ const JoyPage = () => {
         50% { transform: scale(1.8); opacity: 0; }
         100% { opacity: 0; }
       }
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
     `;
     document.head.appendChild(styleElement);
 
@@ -106,44 +118,35 @@ const JoyPage = () => {
   }
 
   return (
-   <div className="container mx-auto px-4 py-8">
-      {/* Header */}
+    <div className="container mx-auto px-4 py-8">
       <header className="mb-8">
         <h1 className="text-3xl font-bold text-center">
-          Joy & JEMA's bug <Bug className={animationStyles.blink} size={24} color="green" /> & our{' '}
-          <Heart className="inline" size={24} color="red" fill="red" />{' '}
+          Joy &amp; JEMA&apos;s bug <Bug style={animationStyles.blink} size={24} color="green" /> &amp; our{' '}
+          <Heart style={{display: 'inline-block'}} size={24} color="red" fill="red" />{' '}
           <span className="text-blue-600">Solo</span>
           <span className="text-gray-600">Learn</span>!
         </h1>
       </header>
 
-      {/* Rest of your JSX remains the same but: */}
-      {/* Replace all animation classes with styles.module.css references */}
-      {/* Example:    <Bug className={animationStyles.blink} size={24} color="green" />   */}
-    
-            {/* Process 1 */}
+      {/* Process 1 */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-6">
-          Process 1: What do SoloLearners like Joy{' '}
-         {' '}
-          & JEMA{' '}
-          {' '}
-          want?
+          Process 1: What do SoloLearners like Joy &amp; JEMA want?
         </h2>
 
         <div className="bg-blue-100 p-4 rounded-lg text-center mb-4">
           <p className="text-blue-800 font-medium inline-flex items-center">
-            <Bug className={animationStyles.blink} size={24} color="green" />
-            Want the Level 21 bug solved in SL quickly!
+            <Bug style={animationStyles.tinRightOut} size={24} color="green" />
+            <span className="ml-2">Want the Level 21 bug solved in SL quickly!</span>
           </p>
         </div>
 
         <div className="flex justify-center space-x-8 mb-8">
           <div className="text-center">
-            <ArrowDown className="mx-auto" />
+            <ArrowDown style={{display: 'block', margin: '0 auto'}} />
           </div>
           <div className="text-center">
-            <ArrowDown className="mx-auto" />
+            <ArrowDown style={{display: 'block', margin: '0 auto'}} />
           </div>
         </div>
 
@@ -153,10 +156,11 @@ const JoyPage = () => {
             <button className="bg-green-500 text-white px-6 py-3 rounded-lg font-bold mb-4">
               Yes! <br /> We are Quick!
             </button>
-            <ArrowDown className="mx-auto mb-4" />
+            <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-4" />
             <div className="bg-green-100 p-4 rounded-lg">
               <p className="text-green-800 inline-flex items-center">
-                Hurrah! <Laugh className={animationStyles.wrench} size={24} color="crimson" className="ml-4" /> Go to Process 2.
+                Hurrah! <Laugh style={animationStyles.wrench} size={24} color="crimson" className="ml-2" /> 
+                <span>Go to Process 2.</span>
               </p>
             </div>
           </div>
@@ -166,16 +170,17 @@ const JoyPage = () => {
             <button className="bg-red-500 text-white px-6 py-3 rounded-lg font-bold mb-4">
               No! <br /> We are slow!
             </button>
-            <ArrowDown className="mx-auto mb-4" />
+            <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-4" />
             <div className="bg-blue-100 p-4 rounded-lg mb-4">
               <p className="text-blue-800 inline-flex items-center">
-                Let's share <Bug className={animationStyles.tinRightOut} size={24} color="green" /> bug details?
+                <Bug style={animationStyles.pulse} size={24} color="green" />
+                <span className="ml-2">Let's share bug details?</span>
               </p>
             </div>
 
             <div className="flex justify-center space-x-8 mb-4">
-              <ArrowDown className="mx-auto" />
-              <ArrowDown className="mx-auto" />
+              <ArrowDown style={{display: 'block', margin: '0 auto'}} />
+              <ArrowDown style={{display: 'block', margin: '0 auto'}} />
             </div>
 
             <div className="grid grid-cols-2 gap-4">
@@ -184,11 +189,13 @@ const JoyPage = () => {
                 <button className="bg-green-500 text-white px-4 py-2 rounded-lg font-bold mb-2">
                   Yes
                 </button>
-                <ArrowDown className="mx-auto mb-2" />
+                <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-2" />
                 <div className="bg-green-100 p-2 rounded-lg">
                   <p className="text-green-800 text-sm inline-flex items-center">
-                    Okay! Then the best <Users className={animationStyles.tinUpOut} size={20} color="black" /> in SL can join to solve
-                    the <Bug className={animationStyles.tinUpOut} size={24} color="green" /> Bug. So, we proceed to step 2.
+                    <Users style={animationStyles.tinUpOut} size={20} color="black" className="mx-1" />
+                    <span>Okay! Then the best in SL can join to solve the </span>
+                    <Bug style={{display: 'inline-block'}} size={20} color="green" className="mx-1" />
+                    <span>Bug. So, we proceed to step 2.</span>
                   </p>
                 </div>
               </div>
@@ -198,11 +205,12 @@ const JoyPage = () => {
                 <button className="bg-red-500 text-white px-4 py-2 rounded-lg font-bold mb-2">
                   No
                 </button>
-                <ArrowDown className="mx-auto mb-2" />
+                <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-2" />
                 <div className="bg-red-100 p-2 rounded-lg">
                   <p className="text-red-800 text-sm inline-flex items-center">
-                    Too Bad! Every one who crosses level 20 will have to wait till the small team at SL solves the Level
-                    21 <Bug className={animationStyles.tinRightOut} size={24} color="green" /> Bug!
+                    <span>Too Bad! Every one who crosses level 20 will have to wait till the small team at SL solves the Level 21 </span>
+                    <Bug style={animationStyles.tinRightOut} size={20} color="green" className="mx-1" />
+                    <span>Bug!</span>
                   </p>
                 </div>
               </div>
@@ -213,38 +221,40 @@ const JoyPage = () => {
 
       {/* Process 2 */}
       <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-6 inline-flex items-center">
+        <h2 className="text-2xl font-bold mb-6">
           Process 2: SL joins with the best Coders among{' '}
-          <Laptop className={animationStyles.blink} size={20} color="green" /> SoloLearners to fix the Bug.
+          <Laptop style={animationStyles.blink} size={20} color="blue" /> SoloLearners to fix the Bug.
         </h2>
 
         <div className="bg-blue-100 p-4 rounded-lg text-center mb-4">
           <p className="text-blue-800 font-medium inline-flex items-center">
-            SL gains a system to fix <Bug className={animationStyles.tinUpOut} size={24} color="green" /> bugs?
+            <Bug style={animationStyles.tinUpOut} size={24} color="green" />
+            <span className="ml-2">SL gains a system to fix bugs?</span>
           </p>
         </div>
 
         <div className="flex justify-center space-x-8 mb-8">
-          <ArrowDown className="mx-auto" />
-          <ArrowDown className="mx-auto" />
+          <ArrowDown style={{display: 'block', margin: '0 auto'}} />
+          <ArrowDown style={{display: 'block', margin: '0 auto'}} />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Teams Path */}
           <div className="text-center">
             <button className="bg-green-500 text-white px-6 py-3 rounded-lg font-bold mb-4">
-              SL forms Teams <Users className="inline ml-2" size={24} color="white" />
+              SL forms Teams <Users style={{display: 'inline-block'}} size={24} color="white" className="ml-2" />
             </button>
-            <ArrowDown className="mx-auto mb-4" />
+            <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-4" />
             <div className="bg-green-100 p-4 rounded-lg mb-4">
               <p className="text-green-800 inline-flex items-center">
-                Joint teams <Users className="mx-2" size={24} color="gold" /> solves all SL bugs?
+                <Users style={{color: 'gold', display: 'inline-block'}} size={24} className="mx-2" />
+                <span>Joint teams solves all SL bugs?</span>
               </p>
             </div>
 
             <div className="flex justify-center space-x-8 mb-4">
-              <ArrowDown className="mx-auto" />
-              <ArrowDown className="mx-auto" />
+              <ArrowDown style={{display: 'block', margin: '0 auto'}} />
+              <ArrowDown style={{display: 'block', margin: '0 auto'}} />
             </div>
 
             <div className="grid grid-cols-2 gap-4">
@@ -253,11 +263,12 @@ const JoyPage = () => {
                 <button className="bg-green-500 text-white px-4 py-2 rounded-lg font-bold mb-2">
                   Yes!
                 </button>
-                <ArrowDown className="mx-auto mb-2" />
+                <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-2" />
                 <div className="bg-green-100 p-2 rounded-lg">
                   <p className="text-green-800 text-sm inline-flex items-center">
-                    Many hands solve more bugs. Also, team work yields quicker{' '}
-                    <History className={animationStyles.blink} size={24} color="blue" /> results.
+                    <span>Many hands solve more bugs. Also, team work yields quicker </span>
+                    <History style={animationStyles.blink} size={20} color="blue" className="mx-1" />
+                    <span>results.</span>
                   </p>
                 </div>
               </div>
@@ -267,11 +278,12 @@ const JoyPage = () => {
                 <button className="bg-red-500 text-white px-4 py-2 rounded-lg font-bold mb-2">
                   No
                 </button>
-                <ArrowDown className="mx-auto mb-2" />
+                <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-2" />
                 <div className="bg-red-100 p-2 rounded-lg">
                   <p className="text-red-800 text-sm inline-flex items-center">
-                    SL and SoloLearners can put their heads{' '}
-                    <AlertCircle className="mx-1" size={20} color="red" /> together and think of another process.
+                    <span>SL and SoloLearners can put their heads </span>
+                    <AlertCircle style={{display: 'inline-block'}} size={20} color="red" className="mx-1" />
+                    <span>together and think of another process.</span>
                   </p>
                 </div>
               </div>
@@ -281,20 +293,20 @@ const JoyPage = () => {
           {/* Feedback Path */}
           <div className="text-center">
             <button className="bg-green-500 text-white px-6 py-3 rounded-lg font-bold mb-4">
-              SL asks feedback on <Bug className={animationStyles.burst} size={24} color="black" /> bugs?
+              SL asks feedback on <Bug style={animationStyles.burst} size={24} color="black" /> bugs?
             </button>
-            <ArrowDown className="mx-auto mb-4" />
+            <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-4" />
             <div className="bg-green-100 p-4 rounded-lg mb-4">
               <p className="text-green-800 inline-flex items-center">
-                Okay! SL acts on feedback{' '}
-                <MessageSquare className={animationStyles.wrench} size={24} color="indigo" />
+                <MessageSquare style={animationStyles.wrench} size={24} color="indigo" className="mx-2" />
+                <span>Okay! SL acts on feedback</span>
               </p>
             </div>
-            <ArrowDown className="mx-auto mb-4" />
+            <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-4" />
             <div className="bg-green-100 p-4 rounded-lg">
               <p className="text-green-800 inline-flex items-center">
-                SL has an unique team <Laugh className={animationStyles.spin} size={24} color="green" /> of happy
-                talented coder volunteers!
+                <Laugh style={animationStyles.spin} size={24} color="crimson" className="mx-2" />
+                <span>SL has an unique team of happy talented coder volunteers!</span>
               </p>
             </div>
           </div>
@@ -303,12 +315,12 @@ const JoyPage = () => {
 
       <footer className="mt-12 border-t pt-6">
         <p className="italic">
-          Some of us <User className={animationStyles.pulse} size={24} color="blue" /> may be in SL for a long time. Who knows,
+          Some of us <User style={animationStyles.pulse} size={24} color="blue" /> may be in SL for a long time. Who knows,
           maybe a life time! And, each one of us can do our bit for the SL dream team!{' '}
-          <ThumbsUp className="inline" size={24} color="purple" /> For a start, we can get the correct and latest
-          information on the Level 21 Bug, <Bug className={animationStyles.burst} size={24} color="black" /> or if you have more
+          <ThumbsUp style={{display: 'inline-block'}} size={24} color="purple" /> For a start, we can get the correct and latest
+          information on the Level 21 Bug, <Bug style={animationStyles.burst} size={24} color="black" /> or if you have more
           time, please call the person in SoloLearn that you know the most! This is just a{' '}
-          <Smile className={animationStyles.wrench} size={24} color="crimson" /> demo of what I could do!
+          <Smile style={animationStyles.wrench} size={24} color="crimson" /> demo of what I could do!
         </p>
       </footer>
 
@@ -317,7 +329,28 @@ const JoyPage = () => {
         href="#"
         id="back2Top"
         title="Back to top"
-        className="fixed hidden bottom-12 right-0 bg-gray-300 text-gray-700 text-center w-10 h-10 leading-10 rounded-l-lg hover:bg-blue-200 hover:text-black"
+        style={{
+          position: 'fixed',
+          display: 'none',
+          bottom: '50px',
+          right: '0',
+          backgroundColor: '#DDD',
+          color: '#555',
+          textAlign: 'center',
+          width: '40px',
+          height: '40px',
+          lineHeight: '40px',
+          textDecoration: 'none',
+          borderRadius: '4px 0 0 4px'
+        }}
+        onMouseOver={(e) => {
+          e.currentTarget.style.backgroundColor = '#DDF';
+          e.currentTarget.style.color = '#000';
+        }}
+        onMouseOut={(e) => {
+          e.currentTarget.style.backgroundColor = '#DDD';
+          e.currentTarget.style.color = '#555';
+        }}
       >
         ↑
       </a>
