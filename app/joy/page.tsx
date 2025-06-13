@@ -206,9 +206,8 @@ const JoyPage = () => {
                 <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-2" />
                 <div className="bg-red-100 p-2 rounded-lg">
                   <p className="text-red-800 text-sm inline-flex items-center">
-                    <span>Too Bad! Every one who crosses level 20 will have to wait till the small team at SL solves the Level 21 </span>
-                    <Bug style={animationStyles.tinRightOut} size={24} color="green" />
-                    <span>Bug!</span>
+                    <span>Too Bad! Every one who crosses level 20 will have to wait till the small team at SL solves the Level 21 Bug!</span>
+                    <Bug style={animationStyles.burst} size={24} color="black" />
                   </p>
                 </div>
               </div>
@@ -264,9 +263,8 @@ const JoyPage = () => {
                 <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-2" />
                 <div className="bg-green-100 p-2 rounded-lg">
                   <p className="text-green-800 text-sm inline-flex items-center">
-                    <span>Many hands solve more bugs. Also, team work yields quicker </span>
+                    <span>Many hands solve more bugs. Also, team work yields quicker results.</span>
                     <History style={animationStyles.blink} size={24} color="blue" />
-                    <span>results.</span>
                   </p>
                 </div>
               </div>
@@ -279,9 +277,8 @@ const JoyPage = () => {
                 <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-2" />
                 <div className="bg-red-100 p-2 rounded-lg">
                   <p className="text-red-800 text-sm inline-flex items-center">
-                    <span>SL and SoloLearners can put their heads </span>
+                    <span>SL and SoloLearners can put their heads together and think of another process.</span>
                     <AlertCircle style={{display: 'inline-block'}} size={24} color="red" />
-                    <span>together and think of another process.</span>
                   </p>
                 </div>
               </div>
