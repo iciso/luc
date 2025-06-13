@@ -193,9 +193,7 @@ const JoyPage = () => {
                 <div className="bg-green-100 p-2 rounded-lg">
                   <p className="text-green-800 text-sm inline-flex items-center">
                     <Users style={animationStyles.tinUpOut} size={24} color="black" />
-                    <span>Okay! Then the best in SL can join to solve the </span>
-                    <Bug style={{display: 'inline-block'}} size={24} color="green" />
-                    <span>Bug. So, we proceed to step 2.</span>
+                    <span>Okay! Then the best in SL can join to solve the Bug. So, we proceed to step 2.</span>
                   </p>
                 </div>
               </div>
