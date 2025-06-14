@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { 
-  Gamepad2, Heart, Laugh, Users, User, Laptop, History, 
-  ThumbsUp, Smile, ArrowDown, MessageSquare, AlertCircle 
+  Gamepad2, Trophy, BookOpen, Heart, Laugh, Users, User, Laptop, History, 
+  ThumbsUp, Smile, ArrowDown, MessageSquare, AlertCircle, Award  
 } from 'lucide-react';
 
 const JoyPage = () => {
@@ -121,22 +121,23 @@ const JoyPage = () => {
     <div className="container mx-auto px-4 py-8">
       <header className="mb-8">
         <h1 className="text-3xl font-bold text-center">
-          Challenge or Play<Gamepad2 style={animationStyles.blink} size={24} color="green" /> with our{' '}
+          Challenge <Trophy style={animationStyles.wrench} size={24} color="green" /> or 
+          Play<Gamepad2 style={animationStyles.blink} size={24} color="indigo" /> with our{' '}
           <Heart style={{display: 'inline-block'}} size={24} color="red" fill="red" />{' '}
-          <span className="text-blue-600"> IQRA</span> &amp;
-          <span className="text-gray-600">Learn</span>{' '}Apps.
+          <span className="text-green-600"> IQRA</span> &amp;{' '}
+          <span className="text-blue-600">Learn</span>{' '}Apps.
         </h1>
       </header>
 
       {/* Process 1 */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-6">
-          Process 1: What do you as an IQRA or KALAM player want?
+          Process 1: What do IQRA & KALAM players want?
         </h2>
 
         <div className="bg-blue-100 p-4 rounded-lg text-center mb-4">
           <p className="text-blue-800 font-medium inline-flex items-center">
-            <Gamepad2 style={animationStyles.tinRightOut} size={24} color="green" />
+            <Trophy style={animationStyles.tinRightOut} size={24} color="green" />
             <span className="ml-2">Want to challenge and learn nuances of Islam quickly!</span>
           </p>
         </div>
@@ -193,7 +194,7 @@ const JoyPage = () => {
                 <div className="bg-green-100 p-2 rounded-lg">
                   <p className="text-green-800 text-sm inline-flex items-center">
                     <Users style={animationStyles.tinUpOut} size={24} color="black" />
-                    <span>Okay! Then we challenge the best in IQRA and learn. So, we proceed to step 2.</span>
+                    <span>Okay! We challenge the best in IQRA to learn. We proceed to step 2.</span>
                   </p>
                 </div>
               </div>
@@ -206,7 +207,7 @@ const JoyPage = () => {
                 <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-2" />
                 <div className="bg-red-100 p-2 rounded-lg">
                   <p className="text-red-800 text-sm inline-flex items-center">
-                    <span>Not Bad! We will play KALAM games and wait till we know enough to challenge in IQRA</span>
+                    <span>Not Bad! We will play KALAM games and wait to challenge in IQRA</span>
                     <Gamepad2 style={animationStyles.burst} size={24} color="black" />
                   </p>
                 </div>
@@ -219,13 +220,13 @@ const JoyPage = () => {
       {/* Process 2 */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-6">
-          Process 2: SL joins with the best Coders among{' '}
-          <Laptop style={animationStyles.blink} size={20} color="blue" /> IQRA Players can learn from Infographcis.
+          Process 2: Join the best Challengers among{' '}
+          <Trophy style={animationStyles.blink} size={20} color="blue" /> IQRA Players & learn from Infographcis.
         </h2>
 
         <div className="bg-blue-100 p-4 rounded-lg text-center mb-4">
           <p className="text-blue-800 font-medium inline-flex items-center">
-            <Gamepad2 style={animationStyles.tinUpOut} size={24} color="green" />
+            <Award style={animationStyles.tinUpOut} size={24} color="green" />
             <span className="ml-2">IQRA has a system of Leaderboards and badges</span>
           </p>
         </div>
@@ -239,7 +240,7 @@ const JoyPage = () => {
           {/* Teams Path */}
           <div className="text-center">
             <button className="bg-green-500 text-white px-6 py-3 rounded-lg font-bold mb-4">
-              SL forms Teams <Users style={{display: 'inline-block'}} size={24} color="white" className="ml-2" />
+              IQRA Coders form Teams <Users style={{display: 'inline-block'}} size={24} color="white" className="ml-2" />
             </button>
             <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-4" />
             <div className="bg-green-100 p-4 rounded-lg mb-4">
@@ -263,8 +264,8 @@ const JoyPage = () => {
                 <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-2" />
                 <div className="bg-green-100 p-2 rounded-lg">
                   <p className="text-green-800 text-sm inline-flex items-center">
-                    <span>Many IQRA players top the challenges. Also, teaming up in challenges puts Challengers high up in the Leaderboard.</span>
-                    <History style={animationStyles.blink} size={24} color="blue" />
+                    <span>Many IQRA players form buddy teams and top the Leaderboard.</span>
+                    <History style={animationStyles.blink} size={48} color="blue" />
                   </p>
                 </div>
               </div>
@@ -277,8 +278,8 @@ const JoyPage = () => {
                 <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-2" />
                 <div className="bg-red-100 p-2 rounded-lg">
                   <p className="text-red-800 text-sm inline-flex items-center">
-                    <span>KALAM players play Islamic games and learn the Quran or Kalam of Allah slowly.</span>
-                    <AlertCircle style={{display: 'inline-block'}} size={24} color="red" />
+                    <span>KALAM players play and learn the Kalam of Allah slowly.</span>
+                    <AlertCircle style={{display: 'inline-block'}} size={48} color="red" />
                   </p>
                 </div>
               </div>
@@ -310,11 +311,11 @@ const JoyPage = () => {
 
       <footer className="mt-12 border-t pt-6">
         <p className="italic">
-          All of us <User style={animationStyles.pulse} size={24} color="blue" /> Muslims have be in Islam for a long time. Who knows, 
+          All of us <User style={animationStyles.pulse} size={24} color="blue" /> Muslims have been in Islam for a long time. Who knows, 
           Insha Allah, maybe a life time! And, each one of us can do our bit for our Deen{' '}
           <ThumbsUp style={{display: 'inline-block'}} size={24} color="purple" /> For a start, we can share the links of IQRA and KALAM
           among our families, friends , and communities, <Gamepad2 style={animationStyles.burst} size={24} color="black" /> or if you have more
-          time to spare, please call Rafique and tell him what you would like to do! IQRA and KALAM are just demos{' '}
+          time to spare, please call Rafique and tell him what you would like to do! IQRA and KALAM as freeware and opensource are just demos{' '}
           <Smile style={animationStyles.wrench} size={24} color="crimson" /> of what Rafique could do!
         </p>
       </footer>
