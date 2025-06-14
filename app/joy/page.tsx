@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { 
-  Bug, Heart, Laugh, Users, User, Laptop, History, 
+  Gamepad2, Heart, Laugh, Users, User, Laptop, History, 
   ThumbsUp, Smile, ArrowDown, MessageSquare, AlertCircle 
 } from 'lucide-react';
 
@@ -121,23 +121,23 @@ const JoyPage = () => {
     <div className="container mx-auto px-4 py-8">
       <header className="mb-8">
         <h1 className="text-3xl font-bold text-center">
-          Joy &amp; JEMA&apos;s bug <Bug style={animationStyles.blink} size={24} color="green" /> &amp; our{' '}
+          Challenge or Play<Gamepad2 style={animationStyles.blink} size={24} color="green" /> with our{' '}
           <Heart style={{display: 'inline-block'}} size={24} color="red" fill="red" />{' '}
-          <span className="text-blue-600">Solo</span>
-          <span className="text-gray-600">Learn</span>!
+          <span className="text-blue-600"> IQRA</span> &amp;
+          <span className="text-gray-600">Learn</span>{' '}Apps.
         </h1>
       </header>
 
       {/* Process 1 */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-6">
-          Process 1: What do SoloLearners like Joy &amp; JEMA want?
+          Process 1: What do you as an IQRA or KALAM player want?
         </h2>
 
         <div className="bg-blue-100 p-4 rounded-lg text-center mb-4">
           <p className="text-blue-800 font-medium inline-flex items-center">
-            <Bug style={animationStyles.tinRightOut} size={24} color="green" />
-            <span className="ml-2">Want the Level 21 bug solved in SL quickly!</span>
+            <Gamepad2 style={animationStyles.tinRightOut} size={24} color="green" />
+            <span className="ml-2">Want to challenge and learn nuances of Islam quickly!</span>
           </p>
         </div>
 
@@ -154,7 +154,7 @@ const JoyPage = () => {
           {/* Yes Path */}
           <div className="text-center">
             <button className="bg-green-500 text-white px-6 py-3 rounded-lg font-bold mb-4">
-              Yes! <br /> We are Quick!
+              Yes! <br /> You are Quick!
             </button>
             <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-4" />
             <div className="bg-green-100 p-4 rounded-lg">
@@ -168,13 +168,13 @@ const JoyPage = () => {
           {/* No Path */}
           <div className="text-center">
             <button className="bg-red-500 text-white px-6 py-3 rounded-lg font-bold mb-4">
-              No! <br /> We are slow!
+              No! <br /> We want to play in KALAM!
             </button>
             <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-4" />
             <div className="bg-blue-100 p-4 rounded-lg mb-4">
               <p className="text-blue-800 inline-flex items-center">
-                <Bug style={animationStyles.pulse} size={24} color="green" />
-                <span className="ml-2">Let's share bug details?</span>
+                <Gamepad2 style={animationStyles.pulse} size={24} color="green" />
+                <span className="ml-2">Let's share IQRA Challenge details?</span>
               </p>
             </div>
 
@@ -193,7 +193,7 @@ const JoyPage = () => {
                 <div className="bg-green-100 p-2 rounded-lg">
                   <p className="text-green-800 text-sm inline-flex items-center">
                     <Users style={animationStyles.tinUpOut} size={24} color="black" />
-                    <span>Okay! Then the best in SL can join to solve the Bug. So, we proceed to step 2.</span>
+                    <span>Okay! Then we challenge the best in IQRA and learn. So, we proceed to step 2.</span>
                   </p>
                 </div>
               </div>
@@ -206,8 +206,8 @@ const JoyPage = () => {
                 <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-2" />
                 <div className="bg-red-100 p-2 rounded-lg">
                   <p className="text-red-800 text-sm inline-flex items-center">
-                    <span>Too Bad! Every one who crosses level 20 will have to wait till the small team at SL solves the Level 21 Bug!</span>
-                    <Bug style={animationStyles.burst} size={24} color="black" />
+                    <span>Not Bad! We will play KALAM games and wait till we know enough to challenge in IQRA</span>
+                    <Gamepad2 style={animationStyles.burst} size={24} color="black" />
                   </p>
                 </div>
               </div>
@@ -220,13 +220,13 @@ const JoyPage = () => {
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-6">
           Process 2: SL joins with the best Coders among{' '}
-          <Laptop style={animationStyles.blink} size={20} color="blue" /> SoloLearners to fix the Bug.
+          <Laptop style={animationStyles.blink} size={20} color="blue" /> IQRA Players can learn from Infographcis.
         </h2>
 
         <div className="bg-blue-100 p-4 rounded-lg text-center mb-4">
           <p className="text-blue-800 font-medium inline-flex items-center">
-            <Bug style={animationStyles.tinUpOut} size={24} color="green" />
-            <span className="ml-2">SL gains a system to fix bugs?</span>
+            <Gamepad2 style={animationStyles.tinUpOut} size={24} color="green" />
+            <span className="ml-2">IQRA has a system of Leaderboards and badges</span>
           </p>
         </div>
 
@@ -245,7 +245,7 @@ const JoyPage = () => {
             <div className="bg-green-100 p-4 rounded-lg mb-4">
               <p className="text-green-800 inline-flex items-center">
                 <Users style={{color: 'gold', display: 'inline-block'}} size={24} />
-                <span>Joint teams solves all SL bugs?</span>
+                <span>IQRA Challengers learn quickly all the 12 themes in Islam</span>
               </p>
             </div>
 
@@ -263,7 +263,7 @@ const JoyPage = () => {
                 <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-2" />
                 <div className="bg-green-100 p-2 rounded-lg">
                   <p className="text-green-800 text-sm inline-flex items-center">
-                    <span>Many hands solve more bugs. Also, team work yields quicker results.</span>
+                    <span>Many IQRA players top the challenges. Also, teaming up in challenges puts Challengers high up in the Leaderboard.</span>
                     <History style={animationStyles.blink} size={24} color="blue" />
                   </p>
                 </div>
@@ -277,7 +277,7 @@ const JoyPage = () => {
                 <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-2" />
                 <div className="bg-red-100 p-2 rounded-lg">
                   <p className="text-red-800 text-sm inline-flex items-center">
-                    <span>SL and SoloLearners can put their heads together and think of another process.</span>
+                    <span>KALAM players play Islamic games and learn the Quran or Kalam of Allah slowly.</span>
                     <AlertCircle style={{display: 'inline-block'}} size={24} color="red" />
                   </p>
                 </div>
@@ -288,20 +288,20 @@ const JoyPage = () => {
           {/* Feedback Path */}
           <div className="text-center">
             <button className="bg-green-500 text-white px-6 py-3 rounded-lg font-bold mb-4">
-              SL asks feedback on <Bug style={animationStyles.burst} size={24} color="black" /> bugs?
+              KALAM players give feedback on <Gamepad2 style={animationStyles.burst} size={24} color="black" /> Games?
             </button>
             <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-4" />
             <div className="bg-green-100 p-4 rounded-lg mb-4">
               <p className="text-green-800 inline-flex items-center">
                 <MessageSquare style={animationStyles.wrench} size={24} color="indigo" />
-                <span>Okay! SL acts on feedback</span>
+                <span>Okay! Rafique acts on feedback</span>
               </p>
             </div>
             <ArrowDown style={{display: 'block', margin: '0 auto'}} className="mb-4" />
             <div className="bg-green-100 p-4 rounded-lg">
               <p className="text-green-800 inline-flex items-center">
                 <Laugh style={animationStyles.spin} size={24} color="crimson" />
-                <span>SL has an unique team of happy talented coder volunteers!</span>
+                <span>KALAM and IQRA have uniquely updated Games, Challenges and Infographics!</span>
               </p>
             </div>
           </div>
@@ -310,12 +310,12 @@ const JoyPage = () => {
 
       <footer className="mt-12 border-t pt-6">
         <p className="italic">
-          Some of us <User style={animationStyles.pulse} size={24} color="blue" /> may be in SL for a long time. Who knows,
-          maybe a life time! And, each one of us can do our bit for the SL dream team!{' '}
-          <ThumbsUp style={{display: 'inline-block'}} size={24} color="purple" /> For a start, we can get the correct and latest
-          information on the Level 21 Bug, <Bug style={animationStyles.burst} size={24} color="black" /> or if you have more
-          time, please call the person in SoloLearn that you know the most! This is just a{' '}
-          <Smile style={animationStyles.wrench} size={24} color="crimson" /> demo of what I could do!
+          All of us <User style={animationStyles.pulse} size={24} color="blue" /> Muslims have be in Islam for a long time. Who knows, 
+          Insha Allah, maybe a life time! And, each one of us can do our bit for our Deen{' '}
+          <ThumbsUp style={{display: 'inline-block'}} size={24} color="purple" /> For a start, we can share the links of IQRA and KALAM
+          among our families, friends , and communities, <Gamepad2 style={animationStyles.burst} size={24} color="black" /> or if you have more
+          time to spare, please call Rafique and tell him what you would like to do! IQRA and KALAM are just demos{' '}
+          <Smile style={animationStyles.wrench} size={24} color="crimson" /> of what Rafique could do!
         </p>
       </footer>
 
